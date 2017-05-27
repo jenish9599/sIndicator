@@ -1,0 +1,92 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:fillViewport="true"
+    >
+
+<LinearLayout
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.cbz.mapss.MapsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+
+    >
+
+    <EditText
+        android:id="@+id/etOrigin"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:ems="10"
+        android:hint="Source"
+        android:textColorHint="#00BFA5"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/etDestination"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"
+        android:ems="10"
+        android:hint="Destination"
+        android:textColorHint="#00BFA5"
+        android:inputType="textPersonName" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp"
+        >
+        <Button
+            android:id="@+id/btnFindPath"
+            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#4DB6AC"
+            android:background="#E0F2F1"
+            android:text="Find Path" />
+
+
+        <TextView
+
+            android:id="@+id/tvDistance"
+            android:layout_marginTop="3dp"
+            android:layout_marginLeft="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="46dp"
+            android:layout_weight="0.84"
+            android:text="0 km" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:layout_weight="10" />
+
+    <Button
+        android:id="@+id/path"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:onClick="onclick"
+        android:text="Show PATH" />
+
+
+</LinearLayout>
+</ScrollView>
